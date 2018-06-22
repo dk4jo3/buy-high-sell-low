@@ -9,6 +9,9 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Style sheet -->
+    <link href="index.css" rel="stylesheet">
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,8 +21,28 @@
     <![endif]-->
   </head>
   <body>
-        
-      {% for post in posts %}
+      <div class="container">
+      <div class="row">
+      <div class="col-sm-12">
+      <h1>BUYHIGHSELLLOW.IO</h1>
+      
+      <h5>Taiwan crypto-fiat exchange price comparison</h5>
+      <h5>台灣虛擬貨幣將交易所價格比較</h5>
+      </div> 
+      </div>
+      <div class="row">
+      <div class="col-sm-5">
+      <hr>
+      </div> 
+      <div class="col-sm-2">
+          <p>Bitcoin</p>
+      </div>
+      <div class="col-sm-5">
+      <hr>
+      </div>
+      </div>
+      </div>
+      <!-- {% for post in posts %}
         <div>
             <p>
             {{ post.market }}'s price is {{ post.price}}<br>
@@ -27,7 +50,7 @@
             It's is {{ post.percent_diff }} percent higher than Coinbase.
             </p>
       </div>
-        {% endfor %}
+        {% endfor %}-->
       
       
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
