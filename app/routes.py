@@ -48,19 +48,23 @@ def index():
             'price' : bito_price,
             'unit_diff' : bito_unit_diff,
             'percent_diff' : bito_perc_diff,
-        },
-       {
-            'market' : 'MaiCoin',
-            'price' : mc_price,
-            'unit_diff' : mc_unit_diff,
-            'percent_diff' : mc_perc_diff,
+            'location' : '../static/style/img/facesbito-logo.png',
         },
         {
             'market' : 'Coinbase',
             'price' : cb_price,
             'unit_diff' : '0',
             'percent_diff' : '0',
+            'location' : '../static/style/img/facescb-logo.png',
         },
+       {
+            'market' : 'MaiCoin',
+            'price' : mc_price,
+            'unit_diff' : mc_unit_diff,
+            'percent_diff' : mc_perc_diff,
+            'location' : '../static/style/img/facesmc-logo.png',
+        }
+        
     ]
     return render_template('index.html', title='Home', user=user, posts=posts)
 

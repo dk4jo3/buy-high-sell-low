@@ -13,6 +13,9 @@
     <link href="../static/style/css/index.css" rel="stylesheet">
     <!-- font awesome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    
+    <!-- font link -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 
 
 
@@ -27,7 +30,7 @@
   <body>
       <div class="container">
       <div class="row">
-      <div class="col-md-12">
+      <div class="header col-md-12">
       <h2>BUYHIGHSELLLOW.IO</h2>
       
       <h5>Taiwan crypto-fiat exchange price comparison</h5>
@@ -51,44 +54,21 @@
           
       <div class="col-md-4">
       <div class="card">
-            <img class="card-img-top" src="../static/style/img/facesbito-logo.png" alt="Card image cap">
+            <img class="card-img-top" src="{{ post.location }}" alt="Card image cap">
             <div class="card-body">
-                    <h3 class="card-title">${{ post.price }}</h3>
+                    <h2 class="card-title">${{ post.price }}</h2>
                 <hr>
-                    <p class="card-text">${{ post.unit_diff }}| {{ post.percent_diff }} % <br> vs. Coinbase</p>
+                    <p class="card-text">${{ post.unit_diff }} | {{ post.percent_diff }} % <br><span class="vs-info">vs. Coinbase</span></p>
 
             
                 <hr>
-                    <a href="#" class="btn btn-primary">Buy Now</a>
+                    <a href="{{ post.link }}" class="btn btn-outline-primary buy-now-btn btn-block">Buy Now</a>
           </div>
           </div>
           </div>
           
             {% endfor %}
-    <!--<div class="col-md-4">
-      <div class="card">
-            <img class="card-img-top" src="../static/style/img/facescb-logo.png" alt="Card image cap">
-            <div class="card-body">
-                    <h3 class="card-title">$ 6000.00</h3>
-                <hr>
-                    <p class="card-text">+521.05 | +12.06% <br> vs. Coinbase</p>
-
-                <hr>
-                    <a href="#" class="btn btn-primary disabled">Unavailable in TW</a>
-          </div>
-          </div>
-          </div><div class="col-md-4">
-      <div class="card">
-            <img class="card-img-top" src="../static/style/img/facesmc-logo.png" alt="Card image cap">
-            <div class="card-body">
-                    <h3 class="card-title"> $ 6000.00</h3>
-                <hr>
-                    <p class="card-text">+520.15 | +13.05% <br> vs. Coinbase</p>
-
-                <hr>
-                    <a href="#" class="btn btn-primary">Buy Now</a>
-          </div>
-          </div>-->
+    
           </div>
       </div>
       <div class="row footer">
