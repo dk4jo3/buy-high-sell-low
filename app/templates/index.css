@@ -12,6 +12,25 @@ body {
 }
 
 .card-row {
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 8%;
+    padding-right: 8%;
+    margin-top: 3%;
+}
+
+
+.card-img-top {
+    width: 60%;
+    margin: 8% auto 5% auto;
+}
+
+.divider {
+    margin-top: 5%;
+}
+
+.footer {
+    margin-top: 20%;
+}
+
+.icon {
+    margin-right: 10%
 }
