@@ -8,9 +8,9 @@
     <title>buyhighselllow.io</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/style/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom Style sheet -->
-    <link href="index.css" rel="stylesheet">
+    <link href="../static/style/css/index.css" rel="stylesheet">
     <!-- font awesome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
@@ -48,7 +48,7 @@
       <div class="row card-row">
       <div class="col-md-4">
       <div class="card">
-            <img class="card-img-top" src="img/facesmc-logo.png" alt="Card image cap">
+            <img class="card-img-top" src="../static/style/img/facesbito-logo.png" alt="Card image cap">
             <div class="card-body">
                     <h3 class="card-title">$ 6000.00</h3>
                 <hr>
@@ -62,7 +62,7 @@
           </div>
     <div class="col-md-4">
       <div class="card">
-            <img class="card-img-top" src="img/facescb-logo.png" alt="Card image cap">
+            <img class="card-img-top" src="../static/style/img/facescb-logo.png" alt="Card image cap">
             <div class="card-body">
                     <h3 class="card-title">$ 6000.00</h3>
                 <hr>
@@ -74,11 +74,11 @@
           </div>
           </div><div class="col-md-4">
       <div class="card">
-            <img class="card-img-top" src="img/facesbito-logo.png" alt="Card image cap">
+            <img class="card-img-top" src="../static/style/img/facesmc-logo.png" alt="Card image cap">
             <div class="card-body">
-                    <h3 class="card-title">{{ posts.price }}</h3>
+                    <h3 class="card-title">{{ post.price }}</h3>
                 <hr>
-                    <p class="card-text">{{ posts.unit_diff }} | {{ posts.percent_diff }}% <br> vs. Coinbase</p>
+                    <p class="card-text">{{ post.unit_diff }} | {{ post.percent_diff }}% <br> vs. Coinbase</p>
 
                 <hr>
                     <a href="#" class="btn btn-primary">Buy Now</a>
@@ -107,7 +107,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../static/style/js/bootstrap.min.js"></script>
   </body>
 </html>
 
