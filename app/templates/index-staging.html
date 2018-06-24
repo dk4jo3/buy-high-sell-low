@@ -42,7 +42,7 @@
       <hr>
       </div> 
       <div class="col-md-2 coin-name">
-          <p><span class="fab fa-bitcoin icon"></span>Bitcoin</p>
+          <p class="coin-name"><span class="fab fa-bitcoin icon"></span>Bitcoin</p>
       </div>
       <div class="col-md-5">
       <hr>
@@ -50,24 +50,52 @@
       </div>
       <div class="row card-row">
           
-          {% for post in posts %}
           
       <div class="col-md-4">
       <div class="card">
-            <img class="card-img-top" src="{{ post.location }}" alt="Card image cap">
+            <img class="card-img-top" src="../static/style/img/facesbito-logo.png" alt="Card image cap">
             <div class="card-body">
-                    <h2 class="card-title">${{ post.price }}</h2>
+                    <h3 class="card-title">$ 6125.12</h3>
                 <hr>
-                    <p class="card-text">${{ post.unit_diff }} | {{ post.percent_diff }} % <br><span class="vs-info">vs. Coinbase</span></p>
+                    <p class="card-text">$125.12 | 12.15 % <br><span class="vs-info">vs. Coinbase</span></p>
 
             
                 <hr>
-                    <a href="{{ post.link }}" class="btn btn-outline-primary btn-block {{ post.btn }}">Buy Now</a>
+                    <a href="http://www.google.com" class="btn btn-outline-primary btn-block">Buy Now</a>
           </div>
           </div>
           </div>
           
-            {% endfor %}
+          <div class="col-md-4">
+      <div class="card">
+            <img class="card-img-top" src="../static/style/img/facescb-logo.png" alt="Card image cap">
+            <div class="card-body">
+                    <h3 class="card-title">$ 6125.12</h3>
+                <hr>
+                    <p class="card-text">$125.12 | 12.15 % <br><span class="vs-info">vs. Coinbase</span></p>
+
+            
+                <hr>
+                    <a href="http://www.google.com" class="btn btn-outline-primary btn-block">Buy Now</a>
+          </div>
+          </div>
+          </div>
+          
+          <div class="col-md-4">
+      <div class="card">
+            <img class="card-img-top" src="../static/style/img/facesmc-logo.png" alt="Card image cap">
+            <div class="card-body">
+                    <h3 class="card-title">$ 6125.12</h3>
+                <hr>
+                    <p class="card-text">$125.12 | 12.15 % <br><span class="vs-info">vs. Coinbase</span></p>
+
+            
+                <hr>
+                    <a href="http://www.google.com" class="btn btn-outline-primary btn-block">Buy Now</a>
+          </div>
+          </div>
+          </div>
+          
     
           </div>
           

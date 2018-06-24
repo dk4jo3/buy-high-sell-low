@@ -49,6 +49,7 @@ def index():
             'unit_diff' : bito_unit_diff,
             'percent_diff' : bito_perc_diff,
             'location' : '../static/style/img/facesbito-logo.png',
+            'link' : "https://www.maicoin.com/en"
         },
         {
             'market' : 'Coinbase',
@@ -56,6 +57,8 @@ def index():
             'unit_diff' : '0',
             'percent_diff' : '0',
             'location' : '../static/style/img/facescb-logo.png',
+            'link' : 'https://www.coinbase.com/dashboard',
+            'btn' : 'diabled'
         },
        {
             'market' : 'MaiCoin',
@@ -63,6 +66,7 @@ def index():
             'unit_diff' : mc_unit_diff,
             'percent_diff' : mc_perc_diff,
             'location' : '../static/style/img/facesmc-logo.png',
+            'link' : 'https://www.bitoex.com/'
         }
         
     ]

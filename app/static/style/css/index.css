@@ -19,14 +19,18 @@ body {
     font-weight: 300;
 }
 
-.header, .divider {
+.header, .divider, .footer {
     color: #FFF;
 }
 
+.footer {
+    font-size: 0.8em;
+    font-weight: 300;
+}
 /* card alignment */
 
 .container {
-  /*padding: 3rem 1.5rem;*/
+  padding: 3rem 1.5rem;
   text-align: center;
 }
 
@@ -38,9 +42,9 @@ body {
 /* margin and padding */
 
 .card-row {
-    padding-left: 8%;
-    padding-right: 8%;
-    margin-top: 3%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    margin-top: 2%;
 }
 
 .card-img-top {
@@ -48,36 +52,52 @@ body {
     margin: 8% auto 5% auto;
 }
 
+.card {
+    margin-top: 5%;
+    border-radius: 0;
+    margin-left: 8%;
+    margin-right: 8%; 
+}
+
 .divider {
     margin-top: 5%;
 }
 
 .footer {
-    margin-top: 20%;
-    ;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .icon {
     margin-right: 10%
 }
 
+.coin-name {
+    margin-bottom: 0;
+}
 /* button */ 
 
-.buy-now-btn {
+.btn {
     border-radius: 0;
     border-color: #091C34;
     border-width: 2px;
     color: #091C34;
 }
 
-.buy-now-btn:hover {
+.btn:hover, .btn:focus {
     background: #091C34;
     color: #FFF;
+    text-decoration: none;
 }
 
 /* divider */
 
-hr { 
+.divider hr { 
     background-color: #FFF; 
     height: 1px; 
     border: 0; }
