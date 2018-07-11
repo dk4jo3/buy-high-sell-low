@@ -4,23 +4,31 @@ import requests
 
 def get_data(url, dir, dir2):
     api_response = requests.get(url)
-    api_data = api_response.json()
-    if dir2 != 0:
-        api_price = api_data[dir][dir2]
-    else: 
-        api_price = api_data[dir]
-    api_price = float(api_price)
-    api_price = round(api_price, 2)
-    return api_price
+    if api_response.status_code != 200:
+        api_price = 'error'
+    else:
+        api_data = api_response.json()
+        if dir2 != 0:
+            api_price = api_data[dir][dir2]
+        else: 
+            api_price = api_data[dir]
+        api_price = float(api_price)
+        api_price = round(api_price, 2)
+        return api_price
 
 def unit_dif(p, cb):
-    result = round(p - cb, 2)
-    return result
+    if p == 'error':
+        return "---"
+    else:
+        result = round(p - cb, 2)
+        return result
 
 def percent_dif(p, cb):
-    result = round(((p - cb) / cb) * 100, 2)
-    return result 
-
+    if p == 'error':
+        return "---"
+    else:
+        result = round(((p - cb) / cb) * 100, 2)
+        return result 
 
 
 cb_price = get_data("https://api.coinbase.com/v2/prices/BTC-USD/buy", "data", "amount") 
@@ -57,7 +65,7 @@ def index():
             'unit_diff' : '0',
             'percent_diff' : '0',
             'location' : '../static/style/img/facescb-logo.png',
-            'link' : 'https://www.coinbase.com/dashboard',
+            'link' : '#',
             'btn' : 'diabled'
         },
        {
