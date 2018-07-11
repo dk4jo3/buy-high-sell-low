@@ -26,7 +26,6 @@ body {
 .footer {
     font-size: 0.8em;
     font-weight: 300;
-    text-align: center;
 }
 /* card alignment */
 
@@ -40,12 +39,6 @@ body {
     flex: 1 1;
 }
 
-.donate-info {
-    text-align: center;
-    color: #fff;
-    font-weight: 300;
-    font-size: .6em;
-}
 /* margin and padding */
 
 .card-row {
@@ -67,15 +60,7 @@ body {
 }
 
 .divider {
-    margin-top: %;
-}
-
-.coin-name {
-    margin-top: .5%;
-}
-
-.donate-row {
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .footer {
