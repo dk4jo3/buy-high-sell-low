@@ -8,9 +8,9 @@
     <title>buyhighselllow.trade</title>
 
     <!-- Bootstrap -->
-    <link href="../static/style/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='../static/style/css/bootstrap.min.css') }}"  rel="stylesheet">
     <!-- Custom Style sheet -->
-    <link href="../static/style/css/index.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='../static/style/css/index.css') }}"  rel="stylesheet">
     <!-- font awesome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     
@@ -72,7 +72,7 @@
           </div>
           
     
-       <div class="row donate-row">
+       <div class="row donate-row" style="color: #fff;">
           <div class="col-sm-12">
               <p>donate pls <br> BTC : 1FXB64fHGBfGVg1aCY31Y6gskdCXQJbb8i <br> ETH : 0x6Efbf5D75895173670327A31d870E97ACd076e94</p>
           </div>
