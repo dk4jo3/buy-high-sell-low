@@ -6,7 +6,7 @@ body {
 
 /* font */
 
-.card-text { 
+.card-text {
     font-size: 1em;
     font-weight: 400;
 }
@@ -63,7 +63,7 @@ body {
     margin-top: 5%;
     border-radius: 0;
     margin-left: 8%;
-    margin-right: 8%; 
+    margin-right: 8%;
 }
 
 .divider {
@@ -85,7 +85,7 @@ body {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    
+
 }
 
 .icon {
@@ -95,13 +95,17 @@ body {
 .coin-name {
     margin-bottom: 0;
 }
-/* button */ 
+/* button */
 
 .btn {
     border-radius: 0;
     border-color: #091C34;
     border-width: 2px;
     color: #091C34;
+}
+
+.disabled {
+    font-size: 0.8em;
 }
 
 .btn:hover, .btn:focus {
@@ -112,7 +116,7 @@ body {
 
 /* divider */
 
-.divider hr { 
-    background-color: #FFF; 
-    height: 1px; 
+.divider hr {
+    background-color: #FFF;
+    height: 1px;
     border: 0; }

@@ -31,7 +31,7 @@
       <div class="container">
       <div class="row">
       <div class="header col-md-12">
-      <h2>BUYHIGHSELLLOW.IO</h2>
+      <h2>BUYHIGHSELLLOW.TRADE</h2>
       
       <h5>Taiwan crypto-fiat exchange BTC price comparison</h5>
       <h5>台灣虛擬貨幣交易所BTC價格比較</h5>
@@ -58,11 +58,11 @@
             <div class="card-body">
                     <h2 class="card-title">${{ post.price }}</h2>
                 <hr>
-                    <p class="card-text">+${{ post.unit_diff }}&nbsp;|&nbsp;+{{ post.percent_diff }} % <br><span class="vs-info">vs. Coinbase</span></p>
+                    <p class="card-text">+${{ post.unit_diff }}&nbsp;/&nbsp;+{{ post.percent_diff }} % <br><span class="vs-info">vs. Coinbase</span></p>
 
             
                 <hr>
-                    <a href="{{ post.link }}" class="btn btn-outline-primary btn-block {{ post.btn }}">Buy Now</a>
+                    <a href="{{ post.link }}" class="btn btn-outline-primary btn-block {{ post.btn }}">{{ post.btn_name }}</a>
           </div>
           </div>
           </div>
