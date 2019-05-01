@@ -1,6 +1,7 @@
 from flask import render_template
 from app import app
 import requests
+import time 
 
 def get_data(url, dir, dir2):
     api_response = requests.get(url)
@@ -33,19 +34,25 @@ def twd_usd(p, decimal):
     if isinstance(p, str) == True:
         return "___"
     else:
-        result = round(p / 29.5, decimal)
+        result = round(p / 30, decimal)
         return result
 
+while True: 
+    cb_price = get_data("https://api.coinbase.com/v2/prices/BTC-USD/buy", "data", "amount") 
+    mc_price = get_data("https://api.maicoin.com/v1/prices/USD", "buy_price", 0)
+    bito_price = get_data("https://www.bitoex.com/api/v1/get_rate", "buy", 0)
+    maimax_price = get_data("https://max-api.maicoin.com/api/v2/tickers/btctwd", "last", 0)
+    bitopro_price = get_data("https://api.bitopro.com/v2/ticker/btc_twd", "lastPrice", 0)
+    bito_price = twd_usd(bito_price, 2)
+    mc_perc_diff = percent_dif(mc_price, cb_price)
+    mc_unit_diff = unit_dif(mc_price, cb_price)
+    bito_perc_diff = percent_dif(bito_price, cb_price)
+    bito_unit_diff = unit_dif(bito_price, cb_price)
 
-cb_price = get_data("https://api.coinbase.com/v2/prices/BTC-USD/buy", "data", "amount") 
-mc_price = get_data("https://api.maicoin.com/v1/prices/USD", "buy_price", 0)
-bito_price = get_data("https://www.bitoex.com/api/v1/get_rate", "buy", 0)
-bito_price = twd_usd(bito_price, 2)
-mc_perc_diff = percent_dif(mc_price, cb_price)
-mc_unit_diff = unit_dif(mc_price, cb_price)
-bito_perc_diff = percent_dif(bito_price, cb_price)
-bito_unit_diff = unit_dif(bito_price, cb_price)
-
+    print (maimax_price)
+    print (bitopro_price)
+    
+    time.sleep(30)
 
 
 @app.route('/')
@@ -61,8 +68,7 @@ bito_unit_diff = unit_dif(bito_price, cb_price)
 def index():
     user = {'username': "anon"}
     posts = [
-        {
-            
+        {  
             'market' : 'BitoEx',
             'price' : bito_price,
             'unit_diff' : bito_unit_diff,
@@ -83,6 +89,15 @@ def index():
         },
        {
             'market' : 'MaiCoin',
+            'price' : mc_price,
+            'unit_diff' : mc_unit_diff,
+            'percent_diff' : mc_perc_diff,
+            'location' : '../static/style/img/facesmc-logo.png',
+            'link' : 'https://www.bitoex.com/',
+            'btn_name' : 'BUY NOW'
+        },
+       {
+            'market' : 'BitoPro',
             'price' : mc_price,
             'unit_diff' : mc_unit_diff,
             'percent_diff' : mc_perc_diff,
