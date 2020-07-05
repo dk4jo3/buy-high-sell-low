@@ -1,0 +1,133 @@
+body {
+    padding-top: 3rem;
+    font-family: roboto;
+    background: #091C34;
+}
+
+/* font */
+
+.card-text {
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.vs-info {
+    font-weight: 300;
+}
+
+.header,
+.divider,
+.footer {
+    color: #FFF;
+}
+
+.footer {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+btn:hover,
+btn:focus {
+    outline: 0px
+}
+
+.donate-row {
+    margin-top: 5%;
+    font-weight: 300;
+    font-size: .8em;
+    text-align: center;
+    color: #fff;
+}
+
+/* card alignment */
+
+.container {
+    padding: 3rem 0.25rem;
+    text-align: center;
+}
+
+a.custom-card,
+a.custom-card:hover {
+    color: inherit;
+}
+
+.card {}
+
+/* margin and padding */
+
+.card-row {
+    padding-left: 4vw;
+    padding-right: 4vw;
+    margin-top: 2%;
+}
+
+.card-img-top {
+    width: 60%;
+    margin: 8% auto 5% auto;
+}
+
+.card {
+    margin-top: 5%;
+    border-radius: 0;
+    align-content: center;
+    flex: 1 1;
+    border-radius: 8px;
+}
+
+.divider {
+    margin-top: 5%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.icon {
+    margin-right: 10%
+}
+
+.coin-name {
+    margin-top: .5%;
+}
+
+/* button */
+
+.btn {
+    border-radius: 0;
+    border-color: #091C34;
+    border-width: 2px;
+    color: #091C34;
+}
+
+.btn-outline-primary.disabled {
+    font-size: 1em;
+    color: #999;
+    border: #999
+}
+
+.btn:hover,
+.btn:focus {
+    background: #091C34;
+    color: #FFF;
+    text-decoration: none;
+}
+
+/* divider */
+
+.divider hr {
+    background-color: #FFF;
+    height: 1px;
+    border: 0;
+}
