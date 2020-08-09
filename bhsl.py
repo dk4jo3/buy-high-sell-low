@@ -50,21 +50,21 @@ dataDict = { 'coinbase':
                      'price': getData("https://api.coinbase.com/v2/prices/BTC-USD/buy", "data", "amount"),
                      'unitDif': 0,
                      'percDif': 0,
-                     'img': "../static/style/img/coinbase-card-img.png"
+                     'img': "../buyHighSellLow/static/style/img/coinbase-card-img.png"
                      },
             'bitopro': 
                     {'url': "https://www.bitoex.com/",
                      'price': getData("https://max-api.maicoin.com/api/v2/tickers/btcusdt", "last", 0),
                      'unitDif': unitDiff(bitoPrice),
                      'percDif': percent_dif(bitoPrice),
-                     'img': "../static/style/img/bitopro-card-img.png"
+                     'img': "../buyHighSellLow/static/style/img/bitopro-card-img.png"
                      },
             'maicoin': 
                     {'url': "https://www.maicoin.com/en",
                      'price': getData("https://api.bitopro.com/v3/tickers/btc_usdt", "data", 'lastPrice'),
                      'unitDif': unitDiff(maicoinPrice),
                      'percDif': percent_dif(maicoinPrice),
-                     'img': "../static/style/img/maimax-card-img.png"
+                     'img': "../buyHighSellLow/static/style/img/maimax-card-img.png"
                      },
             'time': 
                     {'currentTime': current_time
