@@ -76,8 +76,8 @@ print (dataDict)
 # write and dump data to json
 
 
-#entire directory path since it will bee run from root in ubuntu
-filename = '/var/www/html/static/style/js/priceData.json'
+# github directory bath
+filename = '/static/style/js/priceData.json'
 with open(filename, 'r') as f:
     data = json.load(f)
     
