@@ -77,7 +77,7 @@ print (dataDict)
 
 
 # github directory bath
-filename = '..//buyHighSellLow/static/style/js/priceData.json'
+filename = '/static/style/js/priceData.json'
 with open(filename, 'r') as f:
     data = json.load(f)
     
