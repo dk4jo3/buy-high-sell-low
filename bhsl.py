@@ -38,7 +38,7 @@ def percent_dif(p):
 
 now = datetime.now()
 
-current_time = now.strftime("%H:%M:%S")
+current_time = now.strftime("%b %d %Y %H:%M:%S")
 # print("Current Time =", current_time)
 
 coinbasePrice = getData("https://api.coinbase.com/v2/prices/BTC-USD/buy", "data", "amount") 
