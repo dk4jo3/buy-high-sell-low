@@ -36,6 +36,22 @@ def percent_dif(p):
         result = round(((p - coinbasePrice) / coinbasePrice) * 100, 2)
         return result
 
+def export_JSON(directory, dict_name):
+	filename = directory
+	with open(filename, 'r') as f:
+	    data = json.load(f)
+	    
+
+	    # overwrite existing obj in json
+	    print (data)
+	    data = dict_name
+
+	os.remove(filename)
+	with open(filename, 'w') as f:
+	    # sort key = true to remain the key order
+	    json.dump(data, f, indent=4, sort_keys=True)
+
+
 now = datetime.now()
 
 current_time = now.strftime("%b %d %Y %H:%M:%S")
@@ -75,18 +91,19 @@ print (dataDict)
 
 # write and dump data to json
 
+export_JSON('btcPriceData.json', dataDict)
 
 # github directory bath
-filename = '../buyHighSellLow/static/style/js/btcPriceData.json'
-with open(filename, 'r') as f:
-    data = json.load(f)
+# filename = 'btcPriceData.json'
+# with open(filename, 'r') as f:
+#     data = json.load(f)
     
 
-    # overwrite existing obj in json
-    print (data)
-    data = dataDict
+#     # overwrite existing obj in json
+#     print (data)
+#     data = dataDict
 
-os.remove(filename)
-with open(filename, 'w') as f:
-    # sort key = true to remain the key order
-    json.dump(data, f, indent=4, sort_keys=True)
+# os.remove(filename)
+# with open(filename, 'w') as f:
+#     # sort key = true to remain the key order
+#     json.dump(data, f, indent=4, sort_keys=True)
