@@ -1,7 +1,7 @@
 // asyng function to fetch
 async function getData() {
 //    const results = await fetch('/../static/style/js/priceData.json'); 
-    const results = await fetch('/../buyHighSellLow/static/style/js/priceData.json');
+    const results = await fetch('/../buyHighSellLow/static/style/js/btcPriceData.json');
     const dataObj = await results.json();
     console.log(dataObj);
 
