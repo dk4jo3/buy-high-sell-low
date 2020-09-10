@@ -1,6 +1,6 @@
 // asyng function to fetch
 async function getData() {
-//    const results = await fetch('/../static/style/js/priceData.json'); 
+
     const results = await fetch('/../buyHighSellLow/static/style/js/btcPriceData.json');
     const dataObj = await results.json();
     console.log(dataObj);
@@ -21,7 +21,6 @@ async function getData() {
     }
 
     // .map the keys to get html content and generate html content
-          
     const cards = objKeys.map(key => {
         return ` <div class="col-md-4">
                 <div class="card">
@@ -36,7 +35,7 @@ async function getData() {
             </div>`
     }).join('');
 
-    const cardRow = document.querySelector('.card-row');
+    const cardRow = document.querySelector('.btc-card-row');
     const timeRow = document.querySelector('.donate-row .time');
     timeRow.textContent = `Last update: ${dataObj['time']['currentTime']}`
     cardRow.innerHTML = cards;
