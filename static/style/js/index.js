@@ -1,45 +1,48 @@
 // asyng function to fetch
 async function getData() {
 
-    const results = await fetch('/../buyHighSellLow/static/style/js/btcPriceData.json');
+    const results = await fetch('/../buyHighSellLow/static/style/js/priceData.json');
     const dataObj = await results.json();
-    console.log(dataObj);
-
-
-    // shorten Object.keys function
-    function getKeys(n) {
-        return Object.keys(n);
-    }
-
-    // get keys and push into a new array
-
-    let objKeys = [];
     
-    // -1 since the last object is time
-    for (i = 0; i < getKeys(dataObj).length - 1; i++) {
-        objKeys.push(getKeys(dataObj)[i]);
-    }
-
-    // .map the keys to get html content and generate html content
-    const cards = objKeys.map(key => {
+    // get keys and push into a new array
+    let objKeys = Object.keys(dataObj);
+    objKeys.pop(); //since the last one is time. 
+    
+    let objSubKeys = Object.keys(dataObj[objKeys[0]]);
+    // it should all be the same, or add a check for that.
+              
+    // function to poop out html content, take object and key array as the parameters
+    function exportCard(arr, object) {
+        const content = arr.map(key => {
         return ` <div class="col-md-4">
                 <div class="card">
-                    <img class="card-img-top" src="${dataObj[key].img}" alt="Card image cap">
+                    <img class="card-img-top" src="${object[key].img}" alt="Card image cap">
                     <div class="card-body">
-                        <h2 class="card-title">US$ ${dataObj[key].price}</h2>
+                        <h2 class="card-title">US$ ${object[key].price}</h2>
                         <hr>
-                        <p class="card-text">$ ${dataObj[key].unitDif >= 0 ? `+` : ``}${dataObj[key].unitDif} &nbsp;/&nbsp; ${dataObj[key].percDif >= 0 ? `+` : ``}${dataObj[key].percDif} % <br><span class="vs-info">vs. Coinbase</span></p>
-                        <a href="${dataObj[key].url}" target="_blank" class="stretched-link"></a>
+                        <p class="card-text">$ ${object[key].unitDif >= 0 ? `+` : ``}${object[key].unitDif} &nbsp;/&nbsp; ${object[key].percDif >= 0 ? `+` : ``}${object[key].percDif} % <br><span class="vs-info">vs. Coinbase</span></p>
+                        <a href="${object[key].url}" target="_blank" class="stretched-link"></a>
                     </div>
                 </div>
             </div>`
     }).join('');
-
-    const cardRow = document.querySelector('.btc-card-row');
+        return content;
+    }
+    
+    //loop for objKey to select html elements and assign exportCard function to them.
+    objKeys.forEach((key) => {
+        window[key+'CardRow'] = document.querySelector(`.${key}-card-row`);
+        //btcCardRow = document.querySelector('.btc-card-row')
+        
+        window[key+'CardRow'].innerHTML = exportCard(objSubKeys, dataObj[key])
+        //btcCardRow.innerHTML = exportCard(objSubKeys, dataObg['btc'])
+    })
+    
+ 
     const timeRow = document.querySelector('.donate-row .time');
     timeRow.textContent = `Last update: ${dataObj['time']['currentTime']}`
-    cardRow.innerHTML = cards;
 
 }
 
 getData();
+
