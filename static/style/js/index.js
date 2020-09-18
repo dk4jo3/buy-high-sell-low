@@ -1,12 +1,11 @@
 // asyng function to fetch
 async function getData() {
 
-    const results = await fetch('/../buyHighSellLow/static/style/js/priceData.json');
+    const results = await fetch('priceData.json');
     const dataObj = await results.json();
     
-    // get keys and push into a new array
-    let objKeys = Object.keys(dataObj);
-    objKeys.pop(); //since the last one is time. 
+    // get keys and push into a new array, and remove the last one (time)
+    let objKeys = Object.keys(dataObj).filter(key => key !== 'time');
     
     let objSubKeys = Object.keys(dataObj[objKeys[0]]);
     // it should all be the same, or add a check for that.

@@ -99,4 +99,4 @@ priceDict['time'] = timeDict
 
 # write and dump data to json
 
-export_JSON('../buyHighSellLow/static/style/js/priceData.json', priceDict)
+export_JSON('priceData.json', priceDict)
