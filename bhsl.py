@@ -56,21 +56,21 @@ def package_dict(cb_price, bito_price, mc_price): #takes those three prices and 
                          'price': cb_price,
                          'unitDif': 0,
                          'percDif': 0,
-                         'img': "../buyHighSellLow/static/style/img/coinbase-card-img.png"
+                         'img': "static/style/img/coinbase-card-img.png"
                          },
                 'bitopro': 
                         {'url': "https://www.bitoex.com/",
                          'price': bito_price,
                          'unitDif': unit_diff(cb_price, bito_price),
                          'percDif': percent_dif(cb_price, bito_price),
-                         'img': "../buyHighSellLow/static/style/img/bitopro-card-img.png"
+                         'img': "static/style/img/bitopro-card-img.png"
                          },
                 'maicoin': 
                         {'url': "https://www.maicoin.com/en",
                          'price': mc_price,
                          'unitDif': unit_diff(cb_price, mc_price),
                          'percDif': percent_dif(cb_price, mc_price),
-                         'img': "../buyHighSellLow/static/style/img/maimax-card-img.png"
+                         'img': "static/style/img/maimax-card-img.png"
                          }
                          }
     return subDict
