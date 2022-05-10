@@ -2,50 +2,50 @@
     "btc": {
         "bitopro": {
             "img": "static/style/img/bitopro-card-img.png",
-            "percDif": -0.39,
-            "price": 31700.0,
-            "unitDif": -124.3,
+            "percDif": -0.27,
+            "price": 31764.74,
+            "unitDif": -85.78,
             "url": "https://www.bitoex.com/"
         },
         "coinbase": {
             "img": "static/style/img/coinbase-card-img.png",
             "percDif": 0,
-            "price": 31824.3,
-            "unitDif": 0,
-            "url": "https://www.coinbase.com/"
-        },
-        "maicoin": {
-            "img": "static/style/img/maimax-card-img.png",
-            "percDif": -0.54,
-            "price": 31650.9,
-            "unitDif": -173.4,
-            "url": "https://www.maicoin.com/en"
-        }
-    },
-    "eth": {
-        "bitopro": {
-            "img": "static/style/img/bitopro-card-img.png",
-            "percDif": -0.53,
-            "price": 2406.25,
-            "unitDif": -12.78,
-            "url": "https://www.bitoex.com/"
-        },
-        "coinbase": {
-            "img": "static/style/img/coinbase-card-img.png",
-            "percDif": 0,
-            "price": 2419.03,
+            "price": 31850.52,
             "unitDif": 0,
             "url": "https://www.coinbase.com/"
         },
         "maicoin": {
             "img": "static/style/img/maimax-card-img.png",
             "percDif": -0.47,
-            "price": 2407.58,
-            "unitDif": -11.45,
+            "price": 31700.0,
+            "unitDif": -150.52,
+            "url": "https://www.maicoin.com/en"
+        }
+    },
+    "eth": {
+        "bitopro": {
+            "img": "static/style/img/bitopro-card-img.png",
+            "percDif": 0.24,
+            "price": 2424.5,
+            "unitDif": 5.87,
+            "url": "https://www.bitoex.com/"
+        },
+        "coinbase": {
+            "img": "static/style/img/coinbase-card-img.png",
+            "percDif": 0,
+            "price": 2418.63,
+            "unitDif": 0,
+            "url": "https://www.coinbase.com/"
+        },
+        "maicoin": {
+            "img": "static/style/img/maimax-card-img.png",
+            "percDif": -0.49,
+            "price": 2406.87,
+            "unitDif": -11.76,
             "url": "https://www.maicoin.com/en"
         }
     },
     "time": {
-        "currentTime": "May 10 2022 13:50:24"
+        "currentTime": "May 10 2022 14:25:07"
     }
 }
